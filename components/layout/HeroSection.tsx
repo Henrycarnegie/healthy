@@ -1,9 +1,9 @@
 import { BrainIcon } from "lucide-react";
 import Badge from "../ui/badge";
 
-const HeroBanner = () => {
+const HeroSection = () => {
    return (
-      <section className="h-screen sticky min-h-[85vh] flex items-center justify-center">
+      <section className="h-screen sticky -mt-20 min-h-[85vh] flex items-center justify-center">
          <div className="mx-auto max-w-4xl px-6 text-center">
             <Badge
                icon={<BrainIcon className="h-4 w-4" />}
@@ -25,4 +25,4 @@ const HeroBanner = () => {
    );
 };
 
-export default HeroBanner;
+export default HeroSection;

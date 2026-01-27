@@ -7,33 +7,34 @@ const TopicSection = () => {
       lavender: "bg-violet-100 text-violet-600",
       coral: "bg-rose-100 text-rose-600",
    };
+
    return (
-      <section className="h-screen sticky top-0 py-20 bg-linear-to-b from-stone-50 to-stone-100">
-         <div className="container mx-auto px-4">
+      <section className="relative bg-linear-to-b from-stone-50 to-stone-100 py-16 md:py-20 lg:h-screen lg:sticky lg:top-0">
+         <div className="container mx-auto px-4 sm:px-6">
             {/* Section Header */}
-            <div className="mb-14 text-center">
-               <h2 className="text-3xl md:text-4xl font-bold text-stone-900 mb-4">
+            <div className="mb-10 md:mb-14 text-center">
+               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-stone-900 mb-3 md:mb-4">
                   What Would You Like to Learn About?
                </h2>
-               <p className="text-lg text-stone-600 max-w-2xl mx-auto">
+               <p className="text-base sm:text-lg text-stone-600 max-w-xl md:max-w-2xl mx-auto">
                   Everyone&apos;s journey is unique. Explore topics that
                   resonate with you at your own pace.
                </p>
             </div>
 
             {/* Topics Grid */}
-            <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mx-auto grid max-w-5xl grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
                {topics.map((topic) => (
                   <Link key={topic.title} href="/learn" className="group">
-                     <div className="rounded-2xl bg-white p-6 border border-stone-200 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+                     <div className="h-full rounded-2xl bg-white p-5 sm:p-6 border border-stone-200 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
                         {/* Icon */}
                         <div
-                           className={`mb-4 flex h-14 w-14 items-center justify-center rounded-xl transition-colors duration-300 ${colorClasses[topic.color as keyof typeof colorClasses]}`}
+                           className={`mb-4 flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-xl transition-colors duration-300 ${colorClasses[topic.color as keyof typeof colorClasses]}`}
                         >
-                           <topic.icon className="h-7 w-7 text-white" />
+                           <topic.icon className="h-6 w-6 sm:h-7 sm:w-7" />
                         </div>
 
-                        <h3 className="mb-2 text-xl font-semibold text-stone-800 transition-colors group-hover:text-emerald-600">
+                        <h3 className="mb-2 text-lg sm:text-xl font-semibold text-stone-800 transition-colors group-hover:text-emerald-600">
                            {topic.title}
                         </h3>
 
