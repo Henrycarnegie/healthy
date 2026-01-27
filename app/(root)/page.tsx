@@ -11,7 +11,7 @@ const page = () => {
          <Navbar />
          <HeroBanner />
          <TopicSection />
-         <section className="min-h-[85vh] h-screen sticky top-0 py-20 bg-amber-100">
+         <section className="min-h-[85vh] h-screen sticky top-0 py-20 bg-emerald-100">
             <div className="container mx-auto px-4">
                <div className="grid items-center gap-12 lg:grid-cols-2">
                   {/* Left Content */}
