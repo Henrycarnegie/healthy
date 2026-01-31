@@ -16,9 +16,8 @@ const defaultNavItems = [
    { label: "About", href: "/about" },
 ];
 
-export default function Navbar({ navItems = defaultNavItems }: NavbarProps) {
+export default function UserNavbar({ navItems = defaultNavItems }: NavbarProps) {
    const [expanded, setExpanded] = useState(false);
-
    return (
       <header
          className="sticky top-6 z-50 "
@@ -26,7 +25,7 @@ export default function Navbar({ navItems = defaultNavItems }: NavbarProps) {
          onMouseLeave={() => setExpanded(false)}
       >
          <div
-            className={`mx-10 my-4 rounded-xl border border-gray-300 bg-gray-100 shadow-sm flex items-center justify-between px-6 py-4 gap-6 transition-all duration-500 ease-out ${expanded ? "max-w-full" : "max-w-22.5"}`}
+            className={`my-4 mx-2 md:mx-10 px-4 md:px-6 py-4 gap-2 md:gap-6 rounded-xl border border-gray-300 shadow-sm flex items-center justify-between transition-all duration-500 ease-out ${expanded ? "max-w-full bg-gray-100" : "bg-gray-300/20 max-w-19 md:max-w-22.5"}`}
          >
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 shrink-0">
@@ -36,9 +35,10 @@ export default function Navbar({ navItems = defaultNavItems }: NavbarProps) {
                   width={40}
                   height={40}
                   priority
+                  className={`opacity-100 ${expanded ? "animate-pulse" : ""}`}
                />
                <span
-                  className={`text-lg font-semibold transition-all duration-300 ${expanded ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-2 pointer-events-none"}`}
+                  className={`hidden md:block text-lg font-semibold transition-all duration-300 ${expanded ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-2 pointer-events-none"}`}
                >
                   Healthy
                </span>
