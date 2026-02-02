@@ -93,7 +93,7 @@ const AIChatPage = () => {
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   placeholder="Start your message"
-                  className="flex-1 rounded-full border border-stone-300 px-5 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-300"
+                  className="w-full flex-1 rounded-full border border-stone-300 px-5 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-300"
                />
                <button
                   type="submit"
