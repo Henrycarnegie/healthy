@@ -1,5 +1,8 @@
+"use client";
+
 import topics from "@/utils/DataTopics";
 import Link from "next/link";
+import { motion } from "motion/react";
 
 const TopicSection = () => {
    const colorClasses = {
@@ -26,7 +29,12 @@ const TopicSection = () => {
             <div className="mx-auto grid max-w-5xl grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
                {topics.map((topic) => (
                   <Link key={topic.title} href="/learn" className="group">
-                     <div className="h-full rounded-2xl bg-white p-5 sm:p-6 border border-stone-200 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+                     <motion.div
+                        className="h-full rounded-2xl bg-white p-5 sm:p-6 border border-stone-200 shadow-sm"
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.95 }}
+                        onHoverStart={() => console.log("hover started!")}
+                     >
                         {/* Icon */}
                         <div
                            className={`mb-4 flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-xl transition-colors duration-300 ${colorClasses[topic.color as keyof typeof colorClasses]}`}
@@ -41,7 +49,7 @@ const TopicSection = () => {
                         <p className="text-sm leading-relaxed text-stone-600">
                            {topic.description}
                         </p>
-                     </div>
+                     </motion.div>
                   </Link>
                ))}
             </div>

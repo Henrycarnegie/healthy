@@ -1,3 +1,5 @@
+"use client";
+
 import Hotline from "@/components/layout/Hotline";
 import MotivationSection from "@/components/layout/MotivationSection";
 import UserNavbar from "@/components/layout/UserNavbar";

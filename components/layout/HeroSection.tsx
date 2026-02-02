@@ -1,10 +1,17 @@
+"use client";
+
 import { BrainIcon } from "lucide-react";
 import Badge from "../ui/badge";
+import { motion } from "motion/react";
 
 const HeroSection = () => {
    return (
-      <section className="h-screen sticky -mt-20 min-h-[85vh] flex items-center justify-center">
-         <div className="mx-auto max-w-4xl px-6 text-center flex flex-col justify-center items-center">
+      <section className="h-screen sticky top-0 -mt-20 min-h-[90vh] flex items-center justify-center">
+         <motion.div
+            className="mx-auto max-w-4xl px-6 text-center flex flex-col justify-center items-center"
+            initial={{ scale: 0 }}
+            animate={{ scale: 1, transition: { duration: 2 } }}
+         >
             <Badge
                icon={<BrainIcon className="h-4 w-4" />}
                label="Mental Health Matters"
@@ -27,7 +34,7 @@ const HeroSection = () => {
             >
                Talk with AI
             </a>
-         </div>
+         </motion.div>
       </section>
    );
 };

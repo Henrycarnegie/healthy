@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import UserMessage from "@/components/chat/UserMessage";
+import Link from "next/link";
 
 type Message = {
    id: string;
@@ -53,7 +54,8 @@ const AIChatPage = () => {
    };
 
    return (
-      <main className="min-h-screen bg-stone-50 flex flex-col items-center px-4 py-10">
+      <div className="min-h-screen bg-stone-50 flex flex-col items-center px-4 py-10">
+         <Link href="./">Home</Link>
          <header className="max-w-4xl w-full text-center mb-8">
             <h1 className="text-3xl font-semibold text-stone-900">
                Talk and Relax with AI
@@ -104,7 +106,7 @@ const AIChatPage = () => {
                </button>
             </form>
          </section>
-      </main>
+      </div>
    );
 };
 
