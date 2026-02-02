@@ -1,9 +1,19 @@
-import React from 'react'
+"use client";
 
-const input = (props: React.InputHTMLAttributes<HTMLInputElement>) => {
-  return (
-    <input {...props} className='border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500' >{props.children}</input>
-  )
+import React from "react";
+
+interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+   placeholder?: string;
 }
 
-export default input
+const Input = ({ placeholder, className = "", ...props }: InputProps) => {
+   return (
+      <input
+         {...props}
+         placeholder={placeholder}
+         className={`flex-1 border border-gray-300 rounded-full px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-400 ${className}`}
+      />
+   );
+};
+
+export default Input;
