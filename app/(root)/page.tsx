@@ -1,12 +1,12 @@
 "use client";
 
-import Hotline from "@/components/layout/Hotline";
-import MotivationSection from "@/components/layout/MotivationSection";
-import UserNavbar from "@/components/layout/UserNavbar";
-import SelfcareSection from "@/components/layout/SelfcareSection";
-import SupportSection from "@/components/layout/SupportSection";
-import TopicSection from "@/components/layout/TopicSection";
-import HeroSection from "@/components/layout/HeroSection";
+import Hotline from "@/components/sections/Hotline";
+import MotivationSection from "@/components/sections/Motivation";
+import UserNavbar from "@/components/sections/UserNavbar";
+import SelfcareSection from "@/components/sections/Selfcare";
+import SupportSection from "@/components/sections/Support";
+import TopicSection from "@/components/sections/Topic";
+import HeroSection from "@/components/sections/Hero";
 
 const page = () => {
    return (
